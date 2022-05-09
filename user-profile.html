@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/bootstrap.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <title>User profile</title>
+</head>
+<body class="container col-12">
+  <header class="d-flex flex-wrap align-items-center justify-content-md-between py-3 border-bottom">
+    <a type="button" href="index.html" class="btn btn-outline-primary"><i class="bi bi-arrow-left"></i></a>
+    <div class="d-flex col-md-4 align-items-center justify-content-end">
+      <span class="me-1">Толя</span>
+      <span class="me-1">ментор</span>
+      <button type="button" class="btn btn-outline-primary ms-2">Выход</button>
+    </div>
+  </header>
+  <main>
+    <section class="d-flex fs-7 border-bottom">
+      <div class="d-flex flex-column justify-content-between py-3 col-6 border-end">
+        <div class="d-flex mb-2">
+          <div class="d-flex flex-column me-4">
+            <img src="img/upic.png" class="img-thumbnail img-upic-l-custom mb-2" alt="...">
+            <a class="h6 mb-0" href="#">Диоген Синопский</a>
+          </div>
+          <div class="d-flex flex-column justify-content-between me-4">
+            <span class="h6">Текущая неделя</span>
+            <span>Закончится: 20 oct</span>
+            <span>Осталось: 2 d</span>
+            <span>Командный проект</span>
+          </div>
+          <div class="d-flex flex-column justify-content-between me-4">
+            <span class="h6">Запас учебных недель</span>
+            <span>Осталось времени: 12 w</span>
+            <span>Осталось задач: 10 w</span>
+            <span>Запас: 2 w</span>
+          </div>
+        </div>
+        <span>Курс: Дауншифтинг. От синьора до курьера</span>
+      </div>
+      <div class="d-flex justify-content-between py-3 ps-3 col-6">
+        <div class="card bg-warning bg-opacity-75 me-3" style="width: 100%">
+          <div class="card-body card-body-custom ">
+            <button class="btn btn-hide-custom"><i class="bi bi-eye-slash"></i></button>
+            <p class="card-text">Накинь этому ученику уроков!!</p>
+          </div>
+        </div>
+        <div class="card bg-success bg-opacity-75 me-3" style="width: 100%">
+          <div class="card-body card-body-custom">
+            <button class="btn btn-hide-custom"><i class="bi bi-eye-slash"></i></button>
+            <p class="card-text">Накинь этому ученику уроков!!</p>
+          </div>
+        </div>
+        <div class="card bg-light me-3" style="width: 100%">
+          <div class="card-body card-body-custom">
+            <button class="btn btn-hide-custom"><i class="bi bi-eye-slash"></i></button>
+            <p class="card-text">Накинь этому ученику уроков!!</p>
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <button type="button" class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle"></i></button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Все</button>
+        </div>
+      </div>
+    </section>
+    <section class="d-flex align-items-start fs-7">
+      <div class="d-flex flex-column py-3 col-6 border-end">
+        <div class="mt-2 me-3 mb-4">
+          <h1 class="h3 flex-grow-1">
+            Программа обучения
+            <button type="button" class="btn ms-2 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-down-right-square"></i></button>
+            <div class="progress mt-2">
+              <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+          </h1>
+        </div>
+        <div class="pe-3 mb-4 pb-2">
+          <div class="d-flex align-items-center">
+            <h2 class="h4 m-0">ּИндивидуальные задачи</h2>
+            <button type="button" class="btn ms-3 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-square"></i></button>
+          </div>
+          <ul class="list-unstyled">
+            <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+              <div class="d-flex flex-column w-100">
+                Задача 1 (актуальная)
+                <div class="fw-light text-secondary">
+                  <span>100%</span>
+                  |
+                  <span>5 ч</span>
+                  |
+                  <span>эта неделя</span>
+                </div>
+              </div>
+              <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+            </li>
+          </ul>
+        </div>
+        <div class="pe-3 mb-4">
+          <h2 class="h4">Модули</h2>
+          <ul class="list-unstyled">
+            <li class="p-2 ps-4">
+              <span class="d-flex align-items-top h5">
+                Django
+                <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+              </span>
+              <ul class="list-unstyled py-2">
+                <li class="d-flex flex-column mb-3 py-2 border-start border-success border-3">
+                  <span class="pb-2 ps-2">
+                    Урок 1 (готов полностью)
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </span>
+                  <ul class="list-unstyled ps-4">
+                    <li class="p-2 mb-2 border-start border-end border-success border-3 row-hover-custom">
+                      Отправить на проверку урок 1 - Django «Пишем Яндекс.Афишу» и еще что-нибудь сделать
+                    </li>
+                    <li class="p-2 mb-2 border-start border-end border-success border-3 row-hover-custom">
+                      Задача 2 (готовая)
+                    </li>
+                  </ul>
+                </li>
+                <li class="d-flex flex-column mb-3 border-start border-warning border-3">
+                  <span class="p-2">
+                    Урок 2 (в процессе)
+                  </span>
+                  <ul class="list-unstyled p-2 ps-4">
+                    <li class="p-2 mb-2 border-start border-end border-success border-3 row-hover-custom">
+                      Задача 1 (готовая)
+                      <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                    </li>
+                    <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+                      <div class="d-flex flex-column w-100">
+                        Задача сделать то-то и то-то и еще всякое
+                        <div class="fw-light text-secondary">
+                          <span>100%</span>
+                          |
+                          <span>5 ч</span>
+                          |
+                          <span>эта неделя</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                    </li>
+                    <li class="d-flex p-2 mb-2 border-start border-end border-info border-3 row-hover-custom">
+                      <div class="d-flex flex-column w-100">
+                        Задача сделать то-то и то-то и еще всякое
+                        <div class="fw-light text-secondary">
+                          <span>100%</span>
+                          |
+                          <span>5 ч</span>
+                          |
+                          <span>эта неделя</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                    </li>
+                    <li class="d-flex p-2 border-start border-end border-light border-3 row-hover-custom text-decoration-line-through fw-light text-secondary">
+                      <div class="d-flex flex-column w-100">
+                        Задача сделать то-то и то-то и еще всякое
+                        <div class="fw-light text-secondary">
+                          <span>100%</span>
+                          |
+                          <span>5 ч</span>
+                          |
+                          <span>эта неделя</span>
+                        </div>
+                      </div>
+                      <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                    </li>
+                  </ul>
+                </li>
+                <li class="d-flex flex-column mb-3 border-start border-danger border-3">
+                  <span class="p-2">
+                    Урок 3 (просроченный)
+                  </span>
+                  <ul class="list-unstyled p-2 ps-4">
+                    <li class="d-flex p-2 mb-2 border-start border-end border-danger border-3 row-hover-custom">
+                      <div class="d-flex flex-column w-100">
+                        Задача 2 (просроченная)
+                      </div>
+                      <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                    </li>
+                    <li class="d-flex p-2 mb-2 border-start border-end border-danger border-3 row-hover-custom">
+                      <div class="d-flex flex-column w-100">
+                        Задача 2 (просроченная)
+                      </div>
+                      <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="h5">Тренажер</span>
+              <ul class="list-unstyled py-2 mt-2">
+                <li class="p-2 mb-2 border-start border-end border-success border-3 row-hover-custom">
+                  Задача 1
+                </li>
+                <li class="p-2 mb-2 border-start border-end border-success border-3 row-hover-custom">
+                  Задача еще одна
+                  <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="pe-3 mb-4">
+          <h2 class="h4">SQL</h2>
+          <ul class="list-unstyled py-2">
+            <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+              <div class="d-flex flex-column w-100">
+                Задача 1 (актуальная)
+                <div class="fw-light text-secondary">
+                  <span>100%</span>
+                  |
+                  <span>5 ч</span>
+                  |
+                  <span>эта неделя</span>
+                </div>
+              </div>
+              <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+            </li>
+            <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+              <div class="d-flex flex-column w-100">
+                Задача 1 (актуальная)
+                <div class="fw-light text-secondary">
+                  <span>100%</span>
+                  |
+                  <span>5 ч</span>
+                  |
+                  <span>эта неделя</span>
+                </div>
+              </div>
+              <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+            </li>
+          </ul>
+        </div>
+        <div class="pe-3">
+          <h2 class="h4">Командные проекты</h2>
+          <ul class="list-unstyled py-2">
+            <li class="d-flex p-2 border-start border-warning border-3">
+              <div class="d-flex flex-column">
+                Задача сделать то-то и то-то и еще всякое
+                <div class="fw-light text-secondary">
+                  <span>100%</span>
+                  |
+                  <span>5 ч</span>
+                  |
+                  <span>эта неделя</span>
+                </div>
+              </div>
+              <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column py-3 col-6">
+        <div class="card ms-3 mb-4 rounded-3">
+          <div class="card-header py-3 d-flex align-items-center justify-content-between">
+            <h3 class="h4 my-0 fw-normal">Отчет</h3>
+            <div class="fw-light text-secondary">
+              <span>обновлено 1 окт</span>
+            |
+            <span>5 ч из 10 ч</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>Тут какой-то комментарий</p>
+            <ul class="list-unstyled">
+              <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+                <div class="d-flex flex-column w-100">
+                  <div>
+                    <span class="h6">Заголовок</span>
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </div>
+                  <p>Описание</p>
+                  <div class="fw-light text-secondary">
+                    <span>50%</span>
+                    |
+                    <span>2.5 ч / 5 ч</span>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+              </li>
+              <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+                <div class="d-flex flex-column w-100">
+                  <div>
+                    <span class="h6">Заголовок</span>
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </div>
+                  <p>Описание</p>
+                  <div class="fw-light text-secondary">
+                    <span>50%</span>
+                    |
+                    <span>2.5 ч / 5 ч</span>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+              </li>
+              <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+                <div class="d-flex flex-column w-100">
+                  <div>
+                    <span class="h6">Заголовок</span>
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </div>
+                  <p>Описание</p>
+                  <div class="fw-light text-secondary">
+                    <span>50%</span>
+                    |
+                    <span>2.5 ч / 5 ч</span>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card ms-3 mb-4 rounded-3">
+          <div class="card-header py-3 d-flex align-items-center justify-content-between">
+            <h3 class="h4 my-0 fw-normal">Недельный план</h3>
+            <div class="fw-light text-secondary">
+              <span>обновлено 1 окт</span>
+            |
+            <span>5 ч из 10 ч</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled">
+              <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 row-hover-custom">
+                <div class="d-flex flex-column w-100">
+                  <div>
+                    <span class="h6">Заголовок</span>
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </div>
+                  <p>Описание</p>
+                  <div class="fw-light text-secondary">
+                    <span>50%</span>
+                    |
+                    <span>2.5 ч / 5 ч</span>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+              </li>
+              <li class="d-flex p-2 mb-2 border-start border-end border-info border-3 row-hover-custom">
+                <div class="d-flex flex-column w-100">
+                  <div>
+                    <span class="h6">Заголовок</span>
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </div>
+                  <p>Описание</p>
+                  <div class="fw-light text-secondary">
+                    <span>50%</span>
+                    |
+                    <span>2.5 ч / 5 ч</span>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+              </li>
+              <li class="d-flex p-2 mb-2 border-start border-end border-info border-3 row-hover-custom">
+                <div class="d-flex flex-column w-100">
+                  <div>
+                    <span class="h6">Заголовок</span>
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </div>
+                  <p>Описание</p>
+                  <div class="fw-light text-secondary">
+                    <span>50%</span>
+                    |
+                    <span>2.5 ч / 5 ч</span>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-baseline"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+              </li>
+            </ul>
+            <p>Тут какой-то комментарий</p>
+            <button type="button" class="btn btn-primary">Выдать</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+  <script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+      myInput.focus()
+    })
+  </script>
+</body>
+</html>

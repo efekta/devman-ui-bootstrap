@@ -1,0 +1,52 @@
+.fs-7 {
+  font-size: 0.9rem;
+}
+
+.accordion-body {
+  padding: 0;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button {
+  padding: 0 0 0.5rem;
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #212529;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  border: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.card-body-custom {
+  position: relative;
+}
+
+.btn-hide-custom {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.img-upic-custom {
+  width: 3rem;
+  height: 3rem;
+}
+
+.img-upic-l-custom {
+  width: 4rem;
+  height: 4rem;
+}
+
+.row-hover-custom:hover {
+  background-color: #f8f9fa;
+}
