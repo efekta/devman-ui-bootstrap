@@ -2,29 +2,51 @@
   font-size: 0.9rem;
 }
 
-.accordion-body {
+.accordion-body-custom {
   padding: 0;
 }
 
-.accordion-item {
+.accordion-item-custom {
   border: none;
 }
 
-.accordion-button {
+.accordion-header-custom {
+  border-bottom: none;
+}
+
+.accordion-button-custom {
+  border: none;
   padding: 0 0 0.5rem;
   font-weight: 500;
 }
 
-.accordion-button:not(.collapsed) {
+.accordion-button-custom:not(.collapsed) {
   color: #212529;
   background-color: #fff;
   box-shadow: none;
 }
 
-.accordion-button:focus {
+.accordion-button-custom:focus {
   border: none;
   outline: 0;
   box-shadow: none;
+}
+
+.main-custom {
+  position: relative;
+}
+
+.filter-button-custom {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.dropdown-menu-custom {
+  min-width: 20rem;
+  padding: 0;
 }
 
 .card-body-custom {
@@ -45,8 +67,4 @@
 .img-upic-l-custom {
   width: 4rem;
   height: 4rem;
-}
-
-.row-hover-custom:hover {
-  background-color: #f8f9fa;
 }

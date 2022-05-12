@@ -8,19 +8,333 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <title>User profile</title>
 </head>
-<body class="container col-12">
-  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
-    <h1 class="h3 mb-0">
-      Список учеников
-    </h1>
-    <div class="d-flex col-md-4 align-items-center justify-content-end">
+<body class="container">
+  <header class="row py-3 border-bottom">
+    <div class="col-6">
+      <h1 class="h3 mb-0">Список учеников</h1>
+    </div>
+    <div class="d-flex col-6 align-items-center justify-content-end">
       <span class="me-1">Толя</span>
       <span class="me-1">ментор</span>
       <button type="button" class="btn btn-outline-primary ms-2">Выход</button>
     </div>
   </header>
-  <main class="d-flex">
-    <section class="col-10 pt-4 pe-3">
+  <main class="row main-custom">
+    <div class="dropstart filter-button-custom">
+      <button type="button" class="btn d-block d-xl-none" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuClickableInside" data-bs-auto-close="outside">
+        <i class="bi bi-funnel-fill text-primary fs-5"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-custom row" aria-labelledby="dropdownMenuClickableInside">
+        <section class="col-12 py-4 px-3 bg-light accordion d-block d-xl-none" id="accordionPanelsStayOpenExample">
+          <span class="fs-5 mb-1">Фильтры</span>
+          <form class="form mt-1 accordion-item accordion-item-custom bg-light" action="#" method="post">
+            <div class="p-0 mb-1">
+              <h3 class="fs-6 py-2 accordion-header accordion-header-custom" id="panelsStayOpen-headingOne">
+                <button class="accordion-button accordion-button-custom bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Группы
+                </button>
+              </h3>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <ul class="accordion-body accordion-body-custom">
+                  <li class="form-check">
+                    <input class="form-check-input" type="radio" name="groupsAll" id="groupsAll" checked="checked">
+                    <label class="form-check-label fs-7" for="groupsAll">
+                      Все
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="radio" name="groupsCourse1" id="groupsCourse1">
+                    <label class="form-check-label fs-7" for="groupsCourse1">
+                      Курс: Дауншифтинг. От синьора до курьера
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="radio" name="groupsCourse2" id="groupsCourse2">
+                    <label class="form-check-label fs-7" for="groupsCourse2">
+                      Курс: Уверенный оператор ПК
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="radio" name="groupsCourse3" id="groupsCourse3">
+                    <label class="form-check-label fs-7" for="groupsCourse3">
+                      Курс: Дауншифтинг. От синьора до курьера
+                    </label>
+                  </li>
+                  <li class="form-check">
+                    <input class="form-check-input" type="radio" name="groupsCourse4" id="groupsCourse4">
+                    <label class="form-check-label fs-7" for="groupsCourse4">
+                      Курс: Уверенный оператор ПК
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+          <form class="form mt-2" action="#" method="post">
+            <h3 class="fs-6 py-2">План на неделю</h3>
+            <ul class="p-0 mb-1">
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="weeklyPlanAll" id="weeklyPlanAll" checked="checked">
+                <label class="form-check-label fs-7" for="weeklyPlanAll">
+                  Все
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="weeklyPlanYes" id="weeklyPlanYes">
+                <label class="form-check-label fs-7" for="weeklyPlanYes">
+                  Есть
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="weeklyPlanNo" id="weeklyPlanNo">
+                <label class="form-check-label fs-7" for="weeklyPlanNo">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </form>
+          <form class="form mt-2" action="#" method="post">
+            <h3 class="fs-6 py-2"><i class="bi bi-people-fill"></i> Групповой проект</h3>
+            <ul class="p-0 mb-1">
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="groupProjectAll" id="groupProjectAll" checked="checked">
+                <label class="form-check-label fs-7" for="groupProjectAll">
+                  Все
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="groupProjectYes" id="groupProjectYes">
+                <label class="form-check-label fs-7" for="groupProjectYes">
+                  Есть
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="groupProjectNo" id="groupProjectNo">
+                <label class="form-check-label fs-7" for="groupProjectNo">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </form>
+          <form class="form mt-2" action="#" method="post">
+            <h3 class="fs-6 py-2">Отчет</h3>
+            <ul class="p-0 mb-1">
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="reportAll" id="reportAll" checked="checked">
+                <label class="form-check-label fs-7" for="reportAll">
+                  Все
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="reportYes" id="reportYes">
+                <label class="form-check-label fs-7" for="reportYes">
+                  Есть
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="reportNo" id="reportNo">
+                <label class="form-check-label fs-7" for="reportNo">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </form>
+          <form class="form mt-2" action="#" method="post">
+            <h3 class="fs-6 py-2">Хватает учебных недель</h3>
+            <ul class="p-0 mb-1">
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="enoughWeeksAll" id="enoughWeeksAll" checked="checked">
+                <label class="form-check-label fs-7" for="enoughWeeksAll">
+                  Все
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="enoughWeeksNo" id="enoughWeeksNo">
+                <label class="form-check-label fs-7" for="enoughWeeksNo">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </form>
+          <form class="form mt-2" action="#" method="post">
+            <h3 class="fs-6 py-2">Начал заниматься (текущая неделя)</h3>
+            <ul class="p-0 mb-1">
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="startExercisingAll" id="startExercisingAll" checked="checked">
+                <label class="form-check-label fs-7" for="startExercisingAll">
+                  Все
+                </label>
+              </li>
+              <li class="form-check">
+                <input class="form-check-input" type="radio" name="startExercisingNo" id="startExercisingNo">
+                <label class="form-check-label fs-7" for="startExercisingNo">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </form>
+        </section>
+      </div>
+    </div>
+    <section class="col-12 mt-5 d-md-none fs-7">
+      <h2 class="fs-5 pb-4 text-secondary fw-normal border-bottom border-2 border-dark">Курс: Дауншифтинг. От синьора до курьера</h2>
+      <div class="py-4 border-bottom border-2 border-dark">
+        <div class="row">
+          <div class="col-4">
+            <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="..."/>
+            <div class="d-flex flex-column pt-1">
+              <span>Диоген Синопский</span>
+              <div>
+                <i class="bi-chat-fill text-danger"></i>
+                <i class="bi-chat-fill text-warning"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="row">Недельный план: 20ч</span>
+            <span class="row">Текущая неделя: 10ч / 20ч</span>
+            <span class="row">Отчет: есть</span>
+          </div>
+          <div class="col-4">
+            <span class="row">Учебный план: 12%</span>
+            <span class="row">Осталось времени: 12 нед</span>
+            <span class="row">Осталось задач: 10 нед</span>
+            <span class="row">Запас: 2 нед</span>
+          </div>
+        </div>
+      </div>
+      <div class="py-4 border-bottom border-2 border-dark">
+        <div class="row">
+          <div class="col-4">
+            <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="..."/>
+            <div class="d-flex flex-column pt-1">
+              <span>Диоген Синопский</span>
+              <div>
+                <i class="bi-chat-fill text-danger"></i>
+                <i class="bi-chat-fill text-warning"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="row">Недельный план: 20ч</span>
+            <span class="row">Текущая неделя: 10ч / 20ч</span>
+            <span class="row">Отчет: есть</span>
+          </div>
+          <div class="col-4">
+            <span class="row">Учебный план: 12%</span>
+            <span class="row">Осталось времени: 12 нед</span>
+            <span class="row">Осталось задач: 10 нед</span>
+            <span class="row">Запас: 2 нед</span>
+          </div>
+        </div>
+      </div>
+      <div class="py-4 border-bottom border-2 border-dark">
+        <div class="row">
+          <div class="col-4">
+            <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="..."/>
+            <div class="d-flex flex-column pt-1">
+              <span>Диоген Синопский</span>
+              <div>
+                <i class="bi-chat-fill text-danger"></i>
+                <i class="bi-chat-fill text-warning"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="row">Недельный план: 20ч</span>
+            <span class="row">Текущая неделя: 10ч / 20ч</span>
+            <span class="row">Отчет: есть</span>
+          </div>
+          <div class="col-4">
+            <span class="row">Учебный план: 12%</span>
+            <span class="row">Осталось времени: 12 нед</span>
+            <span class="row">Осталось задач: 10 нед</span>
+            <span class="row">Запас: 2 нед</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="col-12 my-5 d-md-none fs-7">
+      <h2 class="fs-5 pb-4 text-secondary fw-normal border-bottom border-2 border-dark">
+        Курс: Уверенный оператор ПК
+      </h2>
+      <div class="py-4 border-bottom border-2 border-dark">
+        <div class="row">
+          <div class="col-4">
+            <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="..."/>
+            <div class="d-flex flex-column pt-1">
+              <span>Диоген Синопский</span>
+              <div>
+                <i class="bi-chat-fill text-danger"></i>
+                <i class="bi-chat-fill text-warning"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="row">Недельный план: 20ч</span>
+            <span class="row">Текущая неделя: 10ч / 20ч</span>
+            <span class="row">Отчет: есть</span>
+          </div>
+          <div class="col-4">
+            <span class="row">Учебный план: 12%</span>
+            <span class="row">Осталось времени: 12 нед</span>
+            <span class="row">Осталось задач: 10 нед</span>
+            <span class="row">Запас: 2 нед</span>
+          </div>
+        </div>
+      </div>
+      <div class="py-4 border-bottom border-2 border-dark">
+        <div class="row">
+          <div class="col-4">
+            <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="..."/>
+            <div class="d-flex flex-column pt-1">
+              <span>Диоген Синопский</span>
+              <div>
+                <i class="bi-chat-fill text-danger"></i>
+                <i class="bi-chat-fill text-warning"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="row">Недельный план: 20ч</span>
+            <span class="row">Текущая неделя: 10ч / 20ч</span>
+            <span class="row">Отчет: есть</span>
+          </div>
+          <div class="col-4">
+            <span class="row">Учебный план: 12%</span>
+            <span class="row">Осталось времени: 12 нед</span>
+            <span class="row">Осталось задач: 10 нед</span>
+            <span class="row">Запас: 2 нед</span>
+          </div>
+        </div>
+      </div>
+      <div class="py-4 border-bottom border-2 border-dark">
+        <div class="row">
+          <div class="col-4">
+            <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="..."/>
+            <div class="d-flex flex-column pt-1">
+              <span>Диоген Синопский</span>
+              <div>
+                <i class="bi-chat-fill text-danger"></i>
+                <i class="bi-chat-fill text-warning"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <span class="row">Недельный план: 20ч</span>
+            <span class="row">Текущая неделя: 10ч / 20ч</span>
+            <span class="row">Отчет: есть</span>
+          </div>
+          <div class="col-4">
+            <span class="row">Учебный план: 12%</span>
+            <span class="row">Осталось времени: 12 нед</span>
+            <span class="row">Осталось задач: 10 нед</span>
+            <span class="row">Запас: 2 нед</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="d-none d-md-block col-12 col-xl-10 pt-4 pe-3">
       <table class="table table-hover caption-top mb-5">
         <caption class="fs-5 mb-2">Курс: Дауншифтинг. От синьора до курьера</caption>
         <thead>
@@ -37,8 +351,7 @@
           <tr>
             <th scope="row">
               <div class="d-flex flex-wrap">
-                <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="...">
-                </img>
+                <img src="img/upic.png" class="img-thumbnail img-upic-custom me-2" alt="..."/>
                 <div class="d-flex flex-column pt-1">
                   <span>Диоген Синопский</span>
                   <div>
@@ -326,44 +639,44 @@
         </tbody>
       </table>
     </section>
-    <section class="col-2 d-flex flex-column py-4 px-3 border-start bg-light accordion" id="accordionPanelsStayOpenExample">
+    <section class="d-none d-xl-block col-12 col-lg-2 py-4 px-3 border-start bg-light accordion" id="accordionPanelsStayOpenExample">
       <span class="fs-5 mb-1">Фильтры</span>
-      <form class="form mt-1 accordion-item bg-light" action="#" method="post">
+      <form class="form mt-1 accordion-item accordion-item-custom bg-light" action="#" method="post">
         <div class="p-0 mb-1">
-          <h3 class="fs-6 py-2 accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          <h3 class="fs-6 py-2 accordion-header accordion-header-custom" id="panelsStayOpen-headingOne">
+            <button class="accordion-button accordion-button-custom bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
               Группы
             </button>
           </h3>
           <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-            <ul class="accordion-body">
+            <ul class="accordion-body accordion-body-custom">
               <li class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
-                <label class="form-check-label fs-7" for="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="groupsAll" id="groupsAll" checked="checked">
+                <label class="form-check-label fs-7" for="groupsAll">
                   Все
                 </label>
               </li>
               <li class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label fs-7" for="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="groupsCourse1" id="groupsCourse1">
+                <label class="form-check-label fs-7" for="groupsCourse1">
                   Курс: Дауншифтинг. От синьора до курьера
                 </label>
               </li>
               <li class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label fs-7" for="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="groupsCourse2" id="groupsCourse2">
+                <label class="form-check-label fs-7" for="groupsCourse2">
                   Курс: Уверенный оператор ПК
                 </label>
               </li>
               <li class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label fs-7" for="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="groupsCourse3" id="groupsCourse3">
+                <label class="form-check-label fs-7" for="groupsCourse3">
                   Курс: Дауншифтинг. От синьора до курьера
                 </label>
               </li>
               <li class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label fs-7" for="flexRadioDefault1">
+                <input class="form-check-input" type="radio" name="groupsCourse4" id="groupsCourse4">
+                <label class="form-check-label fs-7" for="groupsCourse4">
                   Курс: Уверенный оператор ПК
                 </label>
               </li>
@@ -372,104 +685,104 @@
         </div>
       </form>
       <form class="form mt-2" action="#" method="post">
+        <h3 class="fs-6 py-2">План на неделю</h3>
         <ul class="p-0 mb-1">
-          <h3 class="fs-6 py-2">План на неделю</h3>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="weeklyPlanAll" id="weeklyPlanAll" checked="checked">
+            <label class="form-check-label fs-7" for="weeklyPlanAll">
               Все
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="weeklyPlanYes" id="weeklyPlanYes">
+            <label class="form-check-label fs-7" for="weeklyPlanYes">
               Есть
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="weeklyPlanNo" id="weeklyPlanNo">
+            <label class="form-check-label fs-7" for="weeklyPlanNo">
               Нет
             </label>
           </li>
         </ul>
       </form>
       <form class="form mt-2" action="#" method="post">
+        <h3 class="fs-6 py-2"><i class="bi bi-people-fill"></i> Групповой проект</h3>
         <ul class="p-0 mb-1">
-          <h3 class="fs-6 py-2"><i class="bi bi-people-fill"></i> Групповой проект</h3>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="groupProjectAll" id="groupProjectAll" checked="checked">
+            <label class="form-check-label fs-7" for="groupProjectAll">
               Все
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="groupProjectYes" id="groupProjectYes">
+            <label class="form-check-label fs-7" for="groupProjectYes">
               Есть
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="groupProjectNo" id="groupProjectNo">
+            <label class="form-check-label fs-7" for="groupProjectNo">
               Нет
             </label>
           </li>
         </ul>
       </form>
       <form class="form mt-2" action="#" method="post">
+        <h3 class="fs-6 py-2">Отчет</h3>
         <ul class="p-0 mb-1">
-          <h3 class="fs-6 py-2">Отчет</h3>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="reportAll" id="reportAll" checked="checked">
+            <label class="form-check-label fs-7" for="reportAll">
               Все
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="reportYes" id="reportYes">
+            <label class="form-check-label fs-7" for="reportYes">
               Есть
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="reportNo" id="reportNo">
+            <label class="form-check-label fs-7" for="reportNo">
               Нет
             </label>
           </li>
         </ul>
       </form>
       <form class="form mt-2" action="#" method="post">
+        <h3 class="fs-6 py-2">Хватает учебных недель</h3>
         <ul class="p-0 mb-1">
-          <h3 class="fs-6 py-2">Хватает учебных недель</h3>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="enoughWeeksAll" id="enoughWeeksAll" checked="checked">
+            <label class="form-check-label fs-7" for="enoughWeeksAll">
               Все
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="enoughWeeksNo" id="enoughWeeksNo">
+            <label class="form-check-label fs-7" for="enoughWeeksNo">
               Нет
             </label>
           </li>
         </ul>
       </form>
       <form class="form mt-2" action="#" method="post">
+        <h3 class="fs-6 py-2">Начал заниматься (текущая неделя)</h3>
         <ul class="p-0 mb-1">
-          <h3 class="fs-6 py-2">Не начал заниматься (текущая неделя)</h3>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked="checked">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
+            <input class="form-check-input" type="radio" name="startExercisingAll" id="startExercisingAll" checked="checked">
+            <label class="form-check-label fs-7" for="startExercisingAll">
               Все
             </label>
           </li>
           <li class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label fs-7" for="flexRadioDefault1">
-              Да
+            <input class="form-check-input" type="radio" name="startExercisingNo" id="startExercisingNo">
+            <label class="form-check-label fs-7" for="startExercisingNo">
+              Нет
             </label>
           </li>
         </ul>
