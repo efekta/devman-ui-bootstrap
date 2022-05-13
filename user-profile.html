@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="d-flex flex-column">
-          <button type="button" class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle"></i></button>
+          <button type="button" class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#newNote"><i class="bi bi-plus-circle"></i></button>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Все</button>
         </div>
       </div>
@@ -293,7 +293,7 @@
                 </div>
                 <div class="col-1">
                   <button type="button" class="btn align-self-baseline"><i class="bi bi-eye-slash fs-5"></i></button>
-                  <button type="button" class="btn align-self-baseline"><i class="bi bi-stopwatch fs-5"></i></button>
+                  <button type="button" class="btn align-self-baseline" data-bs-toggle="modal" data-bs-target="#changeTime"><i class="bi bi-stopwatch fs-5"></i></button>
                 </div>
               </li>
               <li class="row p-2 mb-2 mx-1 border-start border-end border-warning border-3 bg-light">
@@ -471,6 +471,66 @@
               <div class="col-3">
                 <input type="number" class="form-control" placeholder="" aria-label="weeks">
               </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="changeTime" tabindex="-1" aria-labelledby="changeTime" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Изменить время выполнения задачи</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="post">
+            <p>Стандартное время 5ч</p>
+            <div class="row mb-3">
+              <span class="col-5 my-auto">Новое время</span>
+              <div class="col-3">
+                <input type="number" class="form-control" placeholder="" aria-label="weeks">
+              </div>
+            </div>
+            <p>Изменение влияет только на продолжительность выполнения задачи в недельном плане!</p>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="newNote" tabindex="-1" aria-labelledby="newNote" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Новая заметка</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="post">
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Текст</label>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Цвет заметки
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-success" href="#">Желтый</a></li>
+                <li><a class="dropdown-item text-warning" href="#">Зеленый</a></li>
+                <li><a class="dropdown-item text-danger" href="#">Красный</a></li>
+                <li><a class="dropdown-item text-primary" href="#">Синий</a></li>
+                <li><a class="dropdown-item text-secondary" href="#">Серый</a></li>
+              </ul>
             </div>
           </form>
         </div>
