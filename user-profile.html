@@ -62,7 +62,54 @@
         </div>
         <div class="d-flex flex-column">
           <button type="button" class="btn btn-outline-primary mb-3" data-bs-toggle="modal" data-bs-target="#newNote"><i class="bi bi-plus-circle"></i></button>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Все</button>
+          <div class="dropstart">
+            <button type="button" class="btn btn-primary" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuClickableInside" data-bs-auto-close="outside">
+              Все
+            </button>
+            <div class="dropdown-menu dropdown-notes-custom row p-4" aria-labelledby="dropdownMenuClickableInside">
+              <div class="border-bottom mb-3">
+                <div class="card bg-warning bg-opacity-75 me-3 w-100 mb-3">
+                  <div class="card-body card-body-custom ">
+                    <button class="btn btn-hide-custom"><i class="bi bi-archive"></i></button>
+                    <p class="card-text">Накинь этому ученику уроков!!</p>
+                  </div>
+                </div>
+                <div class="card bg-success bg-opacity-75 me-3 w-100 mb-3">
+                  <div class="card-body card-body-custom">
+                    <button class="btn btn-hide-custom"><i class="bi bi-archive"></i></button>
+                    <p class="card-text">Накинь этому ученику уроков!!</p>
+                  </div>
+                </div>
+                <div class="card bg-light me-3 w-100 mb-3">
+                  <div class="card-body card-body-custom">
+                    <button class="btn btn-hide-custom"><i class="bi bi-archive"></i></button>
+                    <p class="card-text">Накинь этому ученику уроков!!</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="text d-block mb-3">Архив</span>
+                <div class="card bg-secondary bg-opacity-75 me-3 w-100 mb-3">
+                  <div class="card-body card-body-custom ">
+                    <button class="btn btn-hide-custom"><i class="bi bi-arrow-clockwise"></i></button>
+                    <p class="card-text">Накинь этому ученику уроков!!</p>
+                  </div>
+                </div>
+                <div class="card bg-secondary bg-opacity-75 me-3 w-100 mb-3">
+                  <div class="card-body card-body-custom ">
+                    <button class="btn btn-hide-custom"><i class="bi bi-arrow-clockwise"></i></button>
+                    <p class="card-text">Накинь этому ученику уроков!!</p>
+                  </div>
+                </div>
+                <div class="card bg-secondary bg-opacity-75 me-3 w-100 mb-3">
+                  <div class="card-body card-body-custom ">
+                    <button class="btn btn-hide-custom"><i class="bi bi-arrow-clockwise"></i></button>
+                    <p class="card-text">Накинь этому ученику уроков!!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <h2 class="h5 mb-4 h2 text-secondary fw-normal" >Курс: Дауншифтинг. От синьора до курьера</h2>
@@ -70,10 +117,25 @@
     <section class="row fs-7">
       <div class="d-flex flex-column py-3 col-12 col-lg-6">
         <div class="mt-2 me-3 mb-4">
-          <div class="flex-grow-1">
+          <div class="flex-grow-1 d-flex flex-wrap justify-content-between">
             <h1 class="h3 d-inline">Программа обучения</h1>
-            <button type="button" class="btn ms-2 fs-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-arrow-down-right-square"></i></button>
-            <div class="progress mt-2">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Быстрая навигация
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Кастомные задачи</a></li>
+                <li><a class="dropdown-item" href="#">Модули</a>
+                  <ul class="list-unstyled">
+                    <li class="ps-3"><a class="dropdown-item" href="#">Модуль 1</a></li>
+                    <li class="ps-3"><a class="dropdown-item" href="#">Модуль 2</a></li>
+                    <li class="ps-3"><a class="dropdown-item" href="#">Модуль 3</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+            <div class="progress mt-2 w-100">
               <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
             </div>
           </div>
