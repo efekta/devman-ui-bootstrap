@@ -148,7 +148,9 @@
           <ul class="list-unstyled">
             <li class="d-flex p-2 mb-2 border-start border-end border-warning border-3 bg-light">
               <div class="d-flex flex-column w-100">
-                Задача 1 (актуальная)
+                <div>
+                  <span>Задача 1 (актуальная)</span>
+                </div>
                 <div class="fw-light text-secondary">
                   <span>100%</span>
                   |
@@ -166,6 +168,66 @@
                   <li><a class="dropdown-item" href="#">Отметить выполненной</a></li>
                 </ul>
               </div>
+            </li>
+            <li class="d-flex flex-wrap p-2 mb-2 border-start border-end border-warning border-3 bg-light">
+              <div class="d-flex w-100">
+                <div class="d-flex flex-column w-100">
+                  <div>
+                    <span>Задача 2 (актуальная разделенная)</span>
+                    <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                  </div>
+                  <div class="fw-light text-secondary">
+                    <span>100%</span>
+                    |
+                    <span>5 ч</span>
+                    |
+                    <span>эта неделя</span>
+                  </div>
+                </div>
+                <button type="button" class="btn align-self-baseline" data-bs-toggle="modal" data-bs-target="#splitTask"><i class="bi bi-layout-split fs-5"></i></button>
+                <div class="dropdown">
+                  <button type="button" class="btn align-self-baseline" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Добавить в текущую неделю</a></li>
+                    <li><a class="dropdown-item" href="#">Добавить в следующую неделю</a></li>
+                    <li><a class="dropdown-item" href="#">Отметить выполненной</a></li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="d-flex w-100 list-unstyled mt-3">
+                <li class="d-flex w-100 border-top border-success border-3 me-2 pt-2 w-50">
+                  <div class="d-flex flex-column w-100">
+                    <div>
+                      <span>Подзадача c очень длинным названием, переходящим в новую строку</span>
+                      <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                    </div>
+                    <div class="fw-light text-secondary">
+                      <span>100%</span>
+                      |
+                      <span>5 ч</span>
+                      |
+                      <span>эта неделя</span>
+                    </div>
+                  </div>
+                  <button type="button" class="btn align-self-baseline" data-bs-toggle="modal" data-bs-target="#splitTask"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                </li>
+                <li class="d-flex w-100 border-top border-warning border-3 pt-2 w-50">
+                  <div class="d-flex flex-column w-100">
+                    <div>
+                      <span>Подзадача</span>
+                      <button type="button" class="btn btn-sm" data-bs-toggle="popover" title="Описание" data-bs-content="Тут какой-то текст"><i class="bi bi-info-square"></i></button>
+                    </div>
+                    <div class="fw-light text-secondary">
+                      <span>100%</span>
+                      |
+                      <span>5 ч</span>
+                      |
+                      <span>эта неделя</span>
+                    </div>
+                  </div>
+                  <button type="button" class="btn align-self-baseline" data-bs-toggle="modal" data-bs-target="#splitTask"><i class="bi bi-three-dots-vertical fs-5"></i></button>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
