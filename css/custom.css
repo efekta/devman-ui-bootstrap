@@ -2,6 +2,10 @@
   font-size: 0.9rem;
 }
 
+.pt-6 {
+  padding-top: 4rem;
+}
+
 .accordion-body-custom {
   padding: 0;
 }
@@ -30,10 +34,6 @@
   border: none;
   outline: 0;
   box-shadow: none;
-}
-
-.main-custom {
-  position: relative;
 }
 
 .filter-button-custom {
