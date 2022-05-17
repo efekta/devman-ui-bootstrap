@@ -678,8 +678,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
           <button type="button" class="btn btn-primary">Сохранить</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
         </div>
       </div>
     </div>
@@ -736,7 +736,7 @@
             <div class="row mb-3">
               <span class="col-5 my-auto">Новое время</span>
               <div class="col-3">
-                <input type="number" class="form-control" placeholder="" aria-label="weeks">
+                <input type="number" class="form-control" placeholder="" aria-label="weeks" id="timeInpur">
               </div>
             </div>
             <p>Изменение влияет только на продолжительность выполнения задачи в недельном плане!</p>
@@ -786,23 +786,21 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script>
     // popover
-    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       return new bootstrap.Popover(popoverTriggerEl)
     })
 
     // modal
-    var myModal = document.getElementById('myModal')
-    var myInput = document.getElementById('myInput')
+    const myModal = document.getElementById('newCustomTask')
+    const myInput = document.getElementById('floatingInput')
 
-    if (myModal!== null) {
-      myModal.addEventListener('shown.bs.modal', function () {
-      myInput.focus()})
-    }
+    myModal.addEventListener('shown.bs.modal', function () {
+    myInput.focus()})
 
     // tooltip
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
     })
 
