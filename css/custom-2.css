@@ -1,0 +1,11 @@
+@media (max-width: 1124px) {
+    .custom-width {
+        width: 100%;
+    }
+}
+
+  @media (min-width: 1125px) {
+    .custom-width {
+        width: 70%;
+    }
+}
