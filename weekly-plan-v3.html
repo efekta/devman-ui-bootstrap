@@ -60,7 +60,7 @@
           <span>20 oct 2022</span>
         </div>
         <div>
-          <strong>Срок отправки отчета:</strong>
+          <strong>Отчет отправлен:</strong>
           <strong>среда, 27 окт 2022</strong>
         </div>
       </div>
@@ -71,8 +71,15 @@
           <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584.531.531 0 0 0 .013-.012l.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354a.717.717 0 0 0-.012.012A6.973 6.973 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1h-3zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0z"/>
         </svg>
         <span>Сделанo:</span>
-        <span>1 задача из 3</span>
-        <span>( 0 часов из 15 )</span>
+        <span>3 задача из 3</span>
+        <span>( 15 часов из 15 )</span>
+      </div>
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading"> Молодец!</h4>
+        <p>Выполнены все задания! Если хотите ещё, напишите ментору.</p>
+        <hr>
+        <span class="me-2">Амаяк Акопян</span>
+        <a href="https://telegram.im/@MrTatlyev">tg.me/username</a>
       </div>
       <ul class="list-unstyled">
         <li class="d-flex p-2 pe-4 mb-3 mx-1 border-start border-end border-success border-3 bg-light">
@@ -99,9 +106,9 @@
             <span class="">5h</span>
           </div>
         </li>
-        <li class="d-flex p-2 pe-4 mb-3 mx-1 border-start border-end border-light border-3 bg-light" onClick="Toast()">
+        <li class="d-flex p-2 pe-4 mb-3 mx-1 border-start border-end border-success border-3 bg-light" onClick="Toast()">
           <div class="form-check d-flex m-2 w-100">
-            <input class="form-check-input me-3 mt-2 p-2" type="checkbox" value="Модули - Django" id="flexCheck2">
+            <input class="form-check-input me-3 mt-2 p-2" type="checkbox" value="Модули - Django" checked id="flexCheck2">
             <div class="flex-grow-1">
               <label class="form-check-label flex-grow-1" for="flexCheck2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
@@ -125,9 +132,9 @@
             <span class="">5h</span>
           </div>
         </li>
-        <li class="d-flex p-2 pe-4 mb-3 mx-1 border-start border-end border-light border-3 bg-light" onClick="Toast()">
+        <li class="d-flex p-2 pe-4 mb-3 mx-1 border-start border-end border-success border-3 bg-light" onClick="Toast()">
           <div class="form-check d-flex m-2 w-100">
-            <input class="form-check-input me-3 mt-2 p-2" type="checkbox" value="Модули - Django" id="flexCheck3">
+            <input class="form-check-input me-3 mt-2 p-2" type="checkbox" value="Модули - Django" checked id="flexCheck3">
             <div class="flex-grow-1">
               <label class="form-check-label" for="flexCheck3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-sql" viewBox="0 0 16 16">
@@ -151,25 +158,6 @@
           </div>
         </li>
       </ul>
-      <div class="d-flex flex-column custom-width">
-        <div class="mb-3">
-          <label for="formFile1" class="form-label">Список слов по английскому языку</label>
-          <input class="form-control" type="file" id="formFile1">
-        </div>
-        <!--If file to big-->
-        <div class="alert alert-danger" role="alert">
-          Слишком большой размер файла. Прикрепляемый файл должен быть не больше 10 мегабайт
-        </div>
-        <div class="mb-3">
-          <label for="formFile2" class="form-label">Список из словаря компьютерных терминов</label>
-          <input class="form-control" type="file" id="formFile2">
-        </div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"><strong>Комментарий</strong></label>
-        <textarea class="form-control custom-width" placeholder="Если вы прошли какие-то задания вне плана - напишите здесь об этом ментору." id="exampleFormControlTextarea1" rows="5"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary custom-width">Отправить этот отчет ментору</button>
     </form>
     <!--If report already sended-->
     <div class="mb-3">

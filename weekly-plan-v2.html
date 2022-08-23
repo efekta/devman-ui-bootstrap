@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="css/custom.css" rel="stylesheet">
+  <title>User weekly plan</title>
+</head>
+<body class="container position-relative">
+  <!--Loader
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>-->
+  <!--Error alert
+  <div class="alert alert-danger" role="alert">
+    {Error message}
+  </div>-->
+  <header class="d-flex align-items-center justify-content-between flex-wrap mb-4 pt-3 border-bottom flex-row-reverse">
+    <button type="button" class="btn btn-primary ms-5 mb-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </button>
+    <div class="d-flex align-items-center justify-content-end mb-3 ms-auto flex-wrap">
+      <a href="#" class="link-primary">Энциклопедия</a>
+      <a href="#" class="link-primary ms-3">Раздел первый</a>
+      <a href="#" class="link-primary ms-3">Раздел 2</a>
+    </div>
+    <div class="mb-3 me-auto">
+      <a href="user-area.html" class="text-decoration-none text-dark"><h1 class="h3 mb-0">Личный кабинет</h1></a>
+    </div>
+  </header>
+  <main>
+    <section class="d-flex flex-column mb-4">
+      <div class="d-flex align-items-end mb-3">
+        <a href="user-area.html" class="btn btn-outline-primary p-2 me-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+        </a>
+        <h2 class="h4">Недельный план</h2>
+      </div>
+      <div class="d-flex flex-column">
+        <div>
+          <span>План не готов.</span>
+        </div>
+        <div>
+          <span>Вам ещё не назначен ментор. Подождите немного. Если уже подождали, обратитесь к администрации: </span><a href="tg.me/administration">tg.me/administration</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Modal & toast-->
+  <div class="toast align-items-center text-white bg-success border-0 position-fixed bottom-0 end-0 me-5 mb-3" id="toastSuccess" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Изменение сохранено
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="modal fade" id="newCustomTask" tabindex="-1" aria-labelledby="newCustomTask" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Отчёт уже отправлен.</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Вы хотите внести изменения в отчёт?</p>
+          <p>Можно будет отправить его ещё раз.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Да, разморозить изменнение очета</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    // popover
+    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+
+    // toast
+    const toastOptions = {
+      animation: true,
+      delay: 2000
+    }
+
+    function Toast ()
+      {
+        const myToastEl = document.getElementById('toastSuccess')
+        const toastEl = new bootstrap.Toast (myToastEl, toastOptions)
+        toastEl.show()
+      }
+
+    // modal
+    const myModal = document.getElementById('newCustomTask')
+    const myInput = document.getElementById('floatingInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+    myInput.focus()})
+  </script>
+</body>
+</html>
