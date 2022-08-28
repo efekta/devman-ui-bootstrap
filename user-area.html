@@ -8,7 +8,7 @@
   <link href="css/custom.css" rel="stylesheet">
   <title>User area</title>
 </head>
-<body class="container">
+<body class="bg-light">
   <!--Loader
   <div class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
@@ -17,35 +17,48 @@
   <div class="alert alert-danger" role="alert">
     {Error message}
   </div>-->
-  <header class="d-flex align-items-center justify-content-between flex-wrap mb-4 pt-3 border-bottom flex-row-reverse">
-    <button type="button" class="btn btn-primary ms-5 mb-3">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-      </svg>
-    </button>
-    <div class="d-flex align-items-center justify-content-end mb-3 ms-auto flex-wrap">
-      <a href="#" class="link-primary">Энциклопедия</a>
-      <a href="#" class="link-primary ms-3">Раздел первый</a>
-      <a href="#" class="link-primary ms-3">Раздел 2</a>
-    </div>
-    <div class="mb-3 me-auto">
-      <a href="user-area.html" class="text-decoration-none text-dark"><h1 class="h3 mb-0">Личный кабинет</h1></a>
+  <header class="mt-2 mb-3">
+    <div class="container d-flex align-items-center justify-content-between flex-wrap py-2 flex-row-reverse">
+      <button type="button" class="btn btn-dark ms-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </button>
+      <ul class="nav d-flex align-items-center justify-content-end ms-auto">
+        <li><a href="#" class="nav-link px-2 link-dark">Энциклопедия</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Раздел первый</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Раздел 2</a></li>
+      </ul>
     </div>
   </header>
-  <main>
+  <main class="container">
+    <div class="mb-3 me-auto">
+      <h1 class="h5 mb-4">Личный кабинет</h1>
+    </div>
     <div class="custom-grid pb-4">
-      <div class="d-flex flex-column w-100 bg-light pt-4 px-4 pb-3">
-        <div class="mb-4">
-          <h2 class="mb-3">Программа обучения "Backender" v1</h2>
-          <div class="ps-3">
-            <div><span>Окончание: </span><span>22 декабря 2022 года</span></div>
-            <div><span>До конца обучения: </span><span>15 недель</span></div>
-            <div class="text-warning"><span>Осталось заданий: </span><span>на 16 недель</span></div>
+      <div class="d-flex flex-column w-100 bg-white pt-5 px-5 pb-5 shadow-sm rounded-custom">
+        <div class="mb-3 position-relative">
+          <h2 class="h4 mb-4">Программа обучения "Backender"</h2>
+          <span class="badge text-dark position-absolute top-0 end-0 custom-margin rounded-pill">до 22/12/2022</span>
+          <div class="fs-7 custom-grid-2">
+            <div class="p-2 border border-1 rounded border-dark"><span>До конца обучения: </span><span>15 недель</span></div>
+            <div class="p-2 border border-1 rounded position-relative border-warning"><span>Осталось заданий: </span><span>16 недель</span>
+              <span class="position-absolute top-0 start-100 translate-middle px-2 bg-warning border border-light rounded-circle">!
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
           </div>
         </div>
-        <div class="card mb-4">
-          <h3 class="card-header h4 text-white bg-primary">Недельный план</h3>
-            <div class="card-body">
+        <hr>
+        <div class="my-3">
+          <a href="weekly-plan.html" class="text-dark text-decoration-none">
+            <h3 class="h4 mb-3">Недельный план
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </h3>
+          </a>
+            <div class="">
               <div class="card-text mb-2">
                 <span>Сделано: </span>
                 <span>1 задача из 3 ( 5 часов из 15 )</span>
@@ -54,92 +67,101 @@
                 <span>Срок отправки отчета: </span>
                 <span>среда, 27 окт 2022</span>
               </div>
-              <a href="weekly-plan.html" class="btn btn-primary mt-4">
-                <span>В недельный план</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                </svg>
-              </a>
             </div>
         </div>
-        <div class="card mb-4">
-          <h3 class="card-header h4 text-white bg-info">Мой ментор</h3>
-            <div class="card-body d-flex flex-column">
-              <div class="position-relative">
+        <hr>
+        <div class="my-3">
+          <h3 class="h4 mb-3">Мой ментор: Амаяк Акопян</h3>
+            <div class="d-flex flex-column">
+              <a href="https://telegram.im/@MrTatlyev" class="d-flex flex-column">
                 <img src="./img/upic.png" class="rounded mb-3" alt="..." style="max-width: 120px;">
-                <a href="https://telegram.im/@MrTatlyev" target="_blank" class="text-decoration-none position-absolute top-0 start-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telegram text-info me-2" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-                  </svg>
+                tg.me/@MrTatlyev
+              </a>
+              <div class="mt-4 fs-7 text-black-50">
+                <span class="card-text mb-2 me-2">22/09/2022 будет новый ментор: </span>
+                <a href="https://telegram.im/@MrTatlyev" class="text-black-50">
+                  Дэвид Блейн
+                  tg.me/DavidBlaine
                 </a>
-              </div>
-              <div>
-                <span class="card-text mb-2 me-2">Амаяк Акопян</span>
-                <a href="https://telegram.im/@MrTatlyev">telegram.me/@MrTatlyev</a>
-              </div>
-              <div class="mt-2">
-                <span class="card-text mb-2 me-2">C 22 апреля 2022 новый ментор: Дэвид Блейн</span>
-                <a href="https://telegram.im/@MrTatlyev">tg.me/DavidBlaine</a>
               </div>
             </div>
         </div>
       </div>
-      <div class="d-flex flex-column w-100 bg-light pt-4 px-4 pb-3">
-        <div class="mb-4">
-          <h2 class="mb-3">Программа обучения "Frontender" v2</h2>
-          <div class="ps-3">
-            <div><span>Окончание: </span><span>22 декабря 2022 года</span></div>
-            <div><span>До конца обучения: </span><span>15 недель</span></div>
-            <div><span>Осталось заданий: </span><span>на 15 недель</span></div>
+      <div class="d-flex flex-column w-100 bg-white pt-5 px-5 pb-5 shadow-sm rounded-custom">
+        <div class="mb-3 position-relative">
+          <h2 class="h4 mb-4">Программа обучения "Frontender"</h2>
+          <span class="badge text-dark position-absolute top-0 end-0 custom-margin rounded-pill">до 22/12/2022</span>
+          <div class="fs-7 custom-grid-2">
+            <div class="p-2 border border-1 rounded border-dark"><span>До конца обучения: </span><span>15 недель</span></div>
+            <div class="p-2 border border-1 rounded position-relative border-success"><span>Осталось заданий: </span><span>15 недель</span>
+              <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
           </div>
         </div>
-        <div class="card mb-4">
-          <h3 class="card-header h4 text-white bg-secondary">Недельный план</h3>
-            <div class="card-body">
+        <hr>
+        <div class="my-3">
+          <a class="text-dark text-decoration-none">
+            <h3 class="h4 mb-3 text-muted">Недельный план
+            </h3>
+          </a>
+            <div class="">
               <div class="card-text mb-2">
-                <span>Нет недельного плана. </span>
+                <span>План ещё не готов.</span>
               </div>
               <div class="card-text">
-                <span>Вам ещё не назначен ментор. Подождите немного. Если уже подождали, обратитесь к администрации: </span><a href="tg.me/administration">tg.me/administration</a>
+                <span>Срок отправки отчета: </span>
+                <span>не определён.</span>
+              </div>
+            </div>
+        </div>
+        <hr>
+        <div class="my-3">
+          <h3 class="h4 mb-3 text-muted">Мой ментор: ещё не назначен</h3>
+            <div class="d-flex flex-column">
+              <div class="card-text">
+                <span>Подождите немного. Если уже подождали, обратитесь к администрации: </span><a href="tg.me/administration">tg.me/administration</a>
               </div>
             </div>
         </div>
       </div>
-      <div class="d-flex flex-column w-100 bg-light pt-4 px-4 pb-3">
-        <div class="mb-4">
-          <h2 class="mb-3">Программа обучения "Backender" v3</h2>
-          <div class="ps-3">
-            <div><span>Окончание: </span><span>22 декабря 2022 года</span></div>
-            <div><span>До конца обучения: </span><span>15 недель</span></div>
-            <div><span>Осталось заданий: </span><span>на 15 недель</span></div>
+      <div class="d-flex flex-column w-100 bg-white pt-5 px-5 pb-5 shadow-sm rounded-custom">
+        <div class="mb-3 position-relative">
+          <h2 class="h4 mb-4">Программа обучения "Fullstacker"</h2>
+          <span class="badge text-dark position-absolute top-0 end-0 custom-margin rounded-pill">до 22/12/2022</span>
+          <div class="fs-7 custom-grid-2">
+            <div class="p-2 border border-1 rounded border-dark"><span>До конца обучения: </span><span>15 недель</span></div>
+            <div class="p-2 border border-1 rounded position-relative border-success"><span>Осталось заданий: </span><span>15 недель</span>
+              <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </div>
           </div>
         </div>
-        <div class="card mb-4">
-          <h3 class="card-header h4 text-white bg-secondary">Недельный план</h3>
-            <div class="card-body">
+        <hr>
+        <div class="my-3">
+          <a class="text-dark text-decoration-none">
+            <h3 class="h4 mb-3 text-muted">Недельный план
+            </h3>
+          </a>
+            <div class="">
               <div class="card-text mb-2">
-                <span>Нет недельного плана. </span>
+                <span>План ещё не готов.</span>
               </div>
-              <div class="card-text mb-2">
-                <span>План не готов. Вы пока можете заниматься самостоятельно по открытым</span> <a href="ya.ru">модулям программы обучения</a>
+              <div class="card-text">
+                <span>Вы пока можете заниматься самостоятельно по открытым</span> <a href="ya.ru">модулям программы обучения</a>
               </div>
             </div>
         </div>
-        <div class="card mb-4">
-          <h3 class="card-header h4 text-white bg-info">Мой ментор</h3>
-            <div class="card-body d-flex flex-column">
-              <div class="position-relative">
+        <hr>
+        <div class="my-3">
+          <h3 class="h4 mb-3">Мой ментор: Амаяк Акопян</h3>
+            <div class="d-flex flex-column">
+              <a href="https://telegram.im/@MrTatlyev" class="d-flex flex-column">
                 <img src="./img/upic.png" class="rounded mb-3" alt="..." style="max-width: 120px;">
-                <a href="https://telegram.im/@MrTatlyev" target="_blank" class="text-decoration-none position-absolute top-0 start-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telegram text-info me-2" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
-                  </svg>
-                </a>
-              </div>
-              <div>
-                <span class="card-text mb-2 me-2">Амаяк Акопян</span>
-                <a href="https://telegram.im/@MrTatlyev">telegram.me/@MrTatlyev</a>
-              </div>
+                tg.me/@MrTatlyev
+              </a>
             </div>
         </div>
       </div>
